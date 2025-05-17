@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Member Area - Wedding Dance Training</title>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #ff69b4;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    main {
+      padding: 2rem;
+    }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+    video {
+      width: 100%;
+      height: 200px;
+      border: none;
+    }
+    .downloads {
+      margin-top: 2rem;
+    }
+    .downloads a {
+      display: block;
+      background: #fff;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #333;
+    }
+    .downloads a:hover {
+      background: #eee;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Your Dance Training Library</h1>
+    <p>All content below is exclusive to paid members</p>
+  </header>
+  <main>
+    <section class="video-grid">
+      <video controls><source src="videos/video4.mp4" type="video/mp4"></video>
+      <video controls><source src="videos/video5.mp4" type="video/mp4"></video>
+      <video controls><source src="videos/video6.mp4" type="video/mp4"></video>
+    </section>
+    <section class="downloads">
+      <h2>Download Practice Files</h2>
+      <a href="/files/waltz-bundle.zip">Waltz Practice Bundle</a>
+      <a href="/files/rumba-routine.zip">Rumba Routine Kit</a>
+    </section>
+  </main>
+  <script>
+    const firebaseConfig = {
+  apiKey: "AIzaSyAn0glg2M8xABFlOyVpYu_0fqc_8uCuNKo",
+  authDomain: "wedding-dance-69f36.firebaseapp.com",
+  projectId: "wedding-dance-69f36",
+  storageBucket: "wedding-dance-69f36.firebasestorage.app",
+  messagingSenderId: "297036354802",
+  appId: "1:297036354802:web:bdeabe9f787e9fb4ec6c6b"
+};
+
+
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    auth.onAuthStateChanged(user => {
+      if (!user) {
+        window.location.href = "login.html";
+      }
+    });
+  </script>
+</body>
+</html>

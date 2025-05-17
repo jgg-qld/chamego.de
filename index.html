@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Dance Training</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+      url('https://images.unsplash.com/photo-1530023367847-bcf49f34d0f6?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    header {
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+    .video-preview {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 2rem;
+    }
+    video {
+      width: 300px;
+      height: 200px;
+      border: none;
+    }
+    .cta {
+      text-align: center;
+      padding: 2rem;
+    }
+    .cta a {
+      background: #ff69b4;
+      color: white;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1.2rem;
+    }
+    .cta a:hover {
+      background: #ff85c1;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Wedding Dance Training</h1>
+    <p>Preview professional training videos before your big day.</p>
+  </header>
+
+  <section class="video-preview">
+    <video controls><source src="videos/video1.mp4" type="video/mp4"></video>
+    <video controls><source src="videos/video2.mp4" type="video/mp4"></video>
+    <video controls><source src="videos/video3.mp4" type="video/mp4"></video>
+  </section>
+
+  <section class="cta">
+    <p>Love what you see? Unlock the full course, tutorials, and files now.</p>
+    <a href="login.html">Join Now</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 WeddingDanceTraining.com.au</p>
+  </footer>
+</body>
+</html>
